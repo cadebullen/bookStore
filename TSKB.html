@@ -1,0 +1,79 @@
+<!DOCTYPE = html>
+<html lang="en">
+<html>
+   <head>
+      <meta charset="UTF-8">
+      <title> TSKB </title>
+      <link rel="stylesheet" href="TSKB.css">
+      <script src="TSKB.js"></script>
+   </head>
+   
+   
+   <body>
+      <fieldset>
+         <h1> The Story Keeper BookStore </h1>
+         <form id='form' method="post" action="TSKB-Option1.php">
+            <div id="input">
+               <label for="fName"> Book Seller's First Name: </label>
+               <input type="text" name="fName" id="fName" required placeholder="Example: Josh"> <small> REQUIRED! </small>
+                  <br>
+               <label for="lName"> Book Seller's Last Name: </label>
+               <input type="text" name="lName" id="lName" required placeholder="Example: Layla"> <small> REQUIRED! </small>
+                  <br>
+               <label for="password"> Book Seller's Password: </label>
+               <input type="password" name="password" id="password" required placeholder="Example: Hello1234$"> <small> REQUIRED! </small>
+                  <br>
+               <label for="personId"> Book Seller's ID: </label>
+               <input type="text" name="personId" id="personId" required placeholder="Example: 12345678"> <small> REQUIRED! </small>
+                  <br>
+               <label for="phoneNumber"> Book Seller's Phone Number: </label>
+               <input type="text" name="phoneNumber" id="phoneNumber" required placeholder="Example: 123-456-6789"> <small> REQUIRED! </small>
+                  <br>
+               <label for="email"> Book Seller's Email: </label>
+               <input type="text" name="email" id="email" placeholder="Example: hello@njit.edu"> <small id="ereq"> REQUIRED! </small>
+            </div>
+               <br>
+            <div>
+               <input type="checkbox" name="emailConfirmation" id="emailConfirmation" class="emailConfirmation">
+               <label for="emailConfirmation"> Please check the box if you would like a confirmation email sent to you. <label>
+            </div>  
+               <br>
+            <div>
+               <label for="transaction"> Select A Transaction From The Drop-Down Menu: </label>
+               <select name="transaction" id="transaction">
+                  <option value="searchAccount"> Search A Book Seller's Account </option>
+                  <option value="bookPurchase"> Customer's Book Purchase </option>
+                  <option value="bookReturn"> Customer's Book Return </option>
+                  <option value="orderUpdate"> Update A Customer's Book Order </option>
+                  <option value="orderCancel"> Cancel A Customer's Book Order </option>
+                  <option value="searchBook"> Search For A Book </option>
+                  <option value="newAccount"> Create A New Customer Account </option>
+               </select>
+            </div>
+            <div>
+               <input type="submit" id="submit" name="submit" onclick=" return Validation();">
+               <input type="reset" id="reset" name="reset">
+            </div>
+         </form>
+      </fieldset>
+   </body>
+
+   <script>
+      // change email to required
+      const check = document.getElementById("emailConfirmation");
+      const addtext = document.querySelector('#ereq');
+      addtext.style.visibility = 'hidden';
+      
+      check.addEventListener('change', () =>{
+         if (check.checked){
+            addtext.style.visibility = 'visible';
+            document.getElementById("email").required = true;
+         }
+         else{
+            addtext.style.visibility = 'hidden';
+            document.getElementById("email").required = false;
+         }
+      });
+      
+   </script>
+<html>

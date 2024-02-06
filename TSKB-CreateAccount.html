@@ -1,0 +1,52 @@
+<!DOCTYPE = html>
+<html lang="en">
+<html>
+   <head>
+      <meta charset="UTF-8">
+      <title> TSKB - Create an Account</title>
+      <link rel="stylesheet" href="TSKB.css">
+      <script src="TSKB-Customer-Purchase.js"></script>
+   </head>
+   
+   <body>
+        <div id="navigationBar">
+            <a href="TSKB.html" target="_self"><button>Home </button></a>
+            <a href="TSKB-Customer-Purchase.html" target="_self"><button> Customer Purchase / Order</button></a>
+            <a href="TSKB-ReturnOrder.html" target="_self"><button> Return a Customer's Order</button></a>
+            <a href="TSKB-UpdateOrder.html" target="_self"><button> Update A Custtomer's Order</button></a>
+            <a href="TSKB-CancelOrder.html" target="_self"><button> Cancel a Customer's Order</button></a>
+            <a href="TSKB-CreateAccount.html" target="_self"><button> Create A Customer Account</button></a>
+            
+            <style>
+                #navigationBar{
+                    text-align: center;
+                    padding: 7px;
+                    float: left;    
+                    color: white;
+                    padding: 18px;
+                }
+                button:hover{
+                    background-color:chartreuse;    
+                }
+            </style>
+        </div>
+        <fieldset>
+            <h1> The Story Keeper BookStore:Create an Account </h1>
+            <form method="post" action="TSKB-Option7.php">
+                <div id="input">
+                    <label for="fName"> Customer's First Name: </label>
+                    <input type="text" name="fName" id="fName" required placeholder="Example: Josh"> <small> REQUIRED! </small>
+                        <br>
+                    <label for="lName"> Customer's Last Name: </label>
+                    <input type="text" name="lName" id="lName" required placeholder="Example: Layla"> <small> REQUIRED! </small>
+                        <br>
+                    <label for="id"> Customer's ID: </label>
+                    <input type="text" name="id" id="id" required placeholder="Example: 12345678"> <small> REQUIRED! </small>
+                </div>
+                <div>
+                    <input type="submit" name="submit" id="submit" value="Submit" onclick="return customerValidation(); return false;">
+                </div>
+            </form>
+        </fieldset>
+   </body>
+</html>

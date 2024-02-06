@@ -1,0 +1,58 @@
+<!DOCTYPE = html>
+<html lang="en">
+<html>
+   <head>
+      <meta charset="UTF-8">
+      <title> TSKB - Return Purchase/Order</title>
+      <link rel="stylesheet" href="TSKB.css">
+      <script src="TSKB-CancelOrder.js"></script>
+   </head>
+   
+   <body>
+        <div id="navigationBar">
+            <a href="TSKB.html" target="_self"><button>Home </button></a>
+            <a href="TSKB-Customer-Purchase.html" target="_self"><button> Customer Purchase / Order</button></a>
+            <a href="TSKB-ReturnOrder.html" target="_self"><button> Return a Customer's Order</button></a>
+            <a href="TSKB-UpdateOrder.html" target="_self"><button> Update A Custtomer's Order</button></a>
+            <a href="TSKB-CancelOrder.html" target="_self"><button> Cancel a Customer's Order</button></a>
+            <a href="TSKB-CreateAccount.html" target="_self"><button> Create A Customer Account</button></a>
+            
+            <style>
+                #navigationBar{
+                    text-align: center;
+                    padding: 7px;
+                    float: left;    
+                    color: white;
+                    padding: 18px;
+                }
+                button:hover{
+                    background-color:chartreuse;    
+                }
+            </style>
+        </div>
+        <fieldset>
+            <h1> The Story Keeper BookStore:Return Purchase/Order</h1>
+            <form action="TSKB-Option3.php">
+                <div id="input">
+                    <label for="id"> Customer's ID: </label>
+                    <input type="text" name="id" id="id" required placeholder="Example: 12345678"> <small> REQUIRED! </small>
+                        <br>
+                    <label for="purchaseid"> Customer's Purchase ID:</label>
+                    <input type="text" name="purchaseid" id="purchaseid" required placeholder="Example: 123"> <small> REQUIRED! </small>
+                </div>
+                <div>
+                    <input type="submit" name="submit" id="submit" onclick="return cancelOrder(); return false;">
+                </div>
+            </form>
+        </fieldset>
+   </body>
+   
+   <script>
+    if (confirm("Are you sure this item was purchased from this book store. If it was not we can not accept a return.")){
+        console.log("They are returning.");
+    }
+    else{
+        window.open("TSKB.html", "_self");
+    }
+  </script>
+</html>
