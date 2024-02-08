@@ -109,10 +109,10 @@ function Validation(){
          document.getElementById("phoneNumber").select();
          return false;
       }
-      else if (pN.length() > 10){
+      else if (pN.length > 10){
          alert("Your phone number is longer than 10 characters. Please type the correct phone number or remove the area code.");
          document.getElementById("phoneNumber").focus();
-         document.getElementById("phonenUmber").select();
+         document.getElementById("phoneNumber").select();
          return false;
       }
       
@@ -122,7 +122,7 @@ function Validation(){
    var email = document.getElementById("email");
    if (email.hasAttribute('required')){
       if (!email.value){
-         alert("Pleae enter an email.");
+         alert("Please enter an email.");
          email.focus();
          email.select();
          return false;
@@ -147,11 +147,11 @@ function Validation(){
       }
    }
 
-   function handleFormSubmission(){
+   function handleFormSubmission() {
       var transactionDropdown = document.getElementById("transaction");
-      var selectedDropdown = transactionDropdown.option[transactionDropdown.selectedIndex].value;
-   
-      switch (selectedDropdown){
+      var selectedDropdown = transactionDropdown.options[transactionDropdown.selectedIndex].value;
+
+      switch (selectedDropdown) {
          case "bookPurchase":
             window.location.href = "TSKB-Customer-Purchase.html";
             break;
@@ -168,5 +168,8 @@ function Validation(){
             window.location.href = "TSKB-CreateAccount.html";
       }
    }
-      
+
+   // Call the form submission function if all validations pass
+   handleFormSubmission();
 }
+   
