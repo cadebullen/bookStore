@@ -1,8 +1,7 @@
 <!DOCTYPE = html>
 <html lang="en">
-<html>
    <head>
-      <meta charset="UTF-8">
+      <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
       <title> TSKB </title>
       <link rel="stylesheet" href="TSKB.css">
       <script src="TSKB.js"></script>
@@ -30,12 +29,13 @@
                <input type="text" name="phoneNumber" id="phoneNumber" required placeholder="Example: 123-456-6789"> <small> REQUIRED! </small>
                   <br>
                <label for="email"> Book Seller's Email: </label>
-               <input type="text" name="email" id="email" placeholder="Example: hello@njit.edu"> <small id="ereq"> REQUIRED! </small>
+               <input type="text" name="email" id="email" placeholder="Example: hello@njit.edu"> <small id="ereq"> REQUIRED! </small> </label>
+               
             </div>
                <br>
             <div>
                <input type="checkbox" name="emailConfirmation" id="emailConfirmation" class="emailConfirmation">
-               <label for="emailConfirmation"> Please check the box if you would like a confirmation email sent to you. <label>
+               <label for="emailConfirmation"> Please check the box if you would like a confirmation email sent to you. </label>
             </div>  
                <br>
             <div>
@@ -56,24 +56,24 @@
             </div>
          </form>
       </fieldset>
-   </body>
 
-   <script>
-      // change email to required
-      const check = document.getElementById("emailConfirmation");
-      const addtext = document.querySelector('#ereq');
-      addtext.style.visibility = 'hidden';
-      
-      check.addEventListener('change', () =>{
-         if (check.checked){
-            addtext.style.visibility = 'visible';
-            document.getElementById("email").required = true;
-         }
-         else{
-            addtext.style.visibility = 'hidden';
-            document.getElementById("email").required = false;
-         }
-      });
-      
-   </script>
+      <script>
+         // change email to required
+         const check = document.getElementById("emailConfirmation");
+         const addtext = document.querySelector('#ereq');
+         addtext.style.visibility = 'hidden';
+         
+         check.addEventListener('change', () =>{
+            if (check.checked){
+               addtext.style.visibility = 'visible';
+               document.getElementById("email").required = true;
+            }
+            else{
+               addtext.style.visibility = 'hidden';
+               document.getElementById("email").required = false;
+            }
+         });
+         
+      </script>
+   </body>
 <html>
