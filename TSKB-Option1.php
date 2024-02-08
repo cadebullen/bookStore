@@ -3,10 +3,10 @@
     error_reporting(-1);
 
     session_start();
-        $servername = "sql1.njit.edu";
-        $username = "cbb23";
-        $password = "Titiforever21..";
-        $dbname = "cbb23";
+        $servername = "";
+        $username = "";
+        $password = "";
+        $dbname = "";
 
         $con = mysqli_connect($servername, $username, $password, $dbname);
         if (!$con) {
